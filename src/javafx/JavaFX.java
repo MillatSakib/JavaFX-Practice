@@ -1,50 +1,45 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/javafx/FXMain.java to edit this template
- */
+
+
+
 package javafx;
-
+ 
 import javafx.application.Application;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
-import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
+import javafx.scene.Group;
+import javafx.scene.Scene;
+import javafx.scene.image.Image;
+import javafx.scene.input.KeyCombination;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.paint.Color;
 
-/**
- *
- * @author Sakib
- */
+
 public class JavaFX extends Application {
-    
-    @Override
-    public void start(Stage primaryStage) {
-        Button btn = new Button();
-        btn.setText("Say 'Hello World'");
-        btn.setOnAction(new EventHandler<ActionEvent>() {
-            
-            @Override
-            public void handle(ActionEvent event) {
-                System.out.println("Hello World!");
-            }
-        });
-        
-        StackPane root = new StackPane();
-        root.getChildren().add(btn);
-        
-        Scene scene = new Scene(root, 300, 250);
-        
-        primaryStage.setTitle("Hello World!");
-        primaryStage.setScene(scene);
-        primaryStage.show();
-    }
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        launch(args);
-    }
-    
+ 
+ public static void main(String[] args) {
+  launch(args);
+ }
+
+ @Override
+ public void start(Stage stage) throws Exception {
+  
+  //Stage stage = new Stage();
+  Group root = new Group();
+  Scene scene = new Scene(root,Color.WHITE);
+  
+//  Image icon = new Image("icon.png");
+//  stage.getIcons().add(icon);
+  stage.setTitle("Stage Demo Program w00t w00t");
+  stage.setWidth(420);
+  stage.setHeight(420);
+  stage.setResizable(false);
+  stage.setX(50);
+  stage.setY(50);
+  stage.setFullScreen(true);
+  stage.setFullScreenExitHint("YOU CAN'T ESCAPE unless you press q");
+  stage.setFullScreenExitKeyCombination(KeyCombination.valueOf("q"));
+  
+  stage.setScene(scene);
+  stage.show();
+ }
 }
