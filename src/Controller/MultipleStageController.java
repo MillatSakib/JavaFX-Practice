@@ -33,7 +33,9 @@ public class MultipleStageController implements Initializable {
         Stage stage = new Stage();
         stage.setScene(scene);
         stage.setTitle("New Scene");
+        Main.stage.close();
         stage.show();
+        
         
     }
     @Override

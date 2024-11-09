@@ -15,9 +15,10 @@ import javafx.stage.Stage;
  * @author Sakib
  */
 public class Main extends Application {
-    
+    public static Stage stage;
     @Override
     public void start(Stage stage)throws Exception{
+        this.stage = stage;
         Parent root = FXMLLoader.load(getClass().getResource("/View/MultipleStage.fxml"));
         Scene scene = new Scene(root);
         stage.setTitle("Multiple Stage");
