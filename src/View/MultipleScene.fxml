@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="Controller.MultipleScene.MultipleSceneController">
+    <stylesheets>
+        <URL value="@multiplescene.css" />
+    </stylesheets>
+   <children>
+      <Text layoutX="152.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="JavaFX Multiple Scnece">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </Text>
+      <HBox alignment="CENTER" layoutY="306.0" prefHeight="94.0" prefWidth="600.0" spacing="50.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#firstButtonAction" text="Click Here To go to second content" />
+            <Button mnemonicParsing="false" onAction="#secondButtonAction" text="Click here to go to first content" />
+         </children>
+      </HBox>
+      <AnchorPane layoutX="-2.0" layoutY="106.0" prefHeight="200.0" prefWidth="600.0" style="-fx-background-color: brown;">
+         <children>
+            <Text fill="WHITE" layoutX="199.0" layoutY="102.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="This is First content">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
