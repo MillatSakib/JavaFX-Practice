@@ -66,6 +66,14 @@ private void handleDelete(ActionEvent Event) throws IOException {
     }
 }
 
+    @FXML
+    private void handleUpdate(ActionEvent Event)throws Exception{
+        File file = new File("text.txt");
+        if(!fileChecker(file)) return;
+        FileWriter FWriter = new FileWriter(file);
+        FWriter.write( textAreaID.getText());
+        FWriter.close();
+    }
     
     @FXML
     private void handleRead(ActionEvent Event) throws IOException{

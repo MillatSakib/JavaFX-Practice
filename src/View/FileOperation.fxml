@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="471.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="Main.FileOperationController">
+<AnchorPane id="AnchorPane" prefHeight="471.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Main.FileOperationController">
     <stylesheets>
         <URL value="@fileoperation.css" />
     </stylesheets>
@@ -22,7 +22,7 @@
       <Button layoutX="274.0" layoutY="126.0" mnemonicParsing="false" onAction="#handleDelete" text="DeleteFile" />
       <Button layoutX="354.0" layoutY="126.0" mnemonicParsing="false" onAction="#handleRead" text="Read File" />
       <TextArea fx:id="textAreaID" layoutX="14.0" layoutY="186.0" prefHeight="200.0" prefWidth="480.0" wrapText="true" />
-      <Button fx:id="dd" layoutX="497.0" layoutY="361.0" mnemonicParsing="false" text="Update File" />
+      <Button layoutX="497.0" layoutY="361.0" mnemonicParsing="false" onAction="#handleUpdate" text="Update File" />
       <TextField fx:id="addText" layoutX="16.0" layoutY="419.0" />
       <Button layoutX="174.0" layoutY="419.0" mnemonicParsing="false" onAction="#handleAddText" text="Add it on note" />
    </children>
