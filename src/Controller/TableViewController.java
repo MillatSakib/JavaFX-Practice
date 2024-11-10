@@ -8,6 +8,7 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.SelectionMode;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
@@ -40,11 +41,20 @@ public class TableViewController implements Initializable {
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        tableView.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
         name.setCellValueFactory(new PropertyValueFactory<Data,String>("name"));
         id.setCellValueFactory(new PropertyValueFactory<Data,Integer>("id"));
         salary.setCellValueFactory(new PropertyValueFactory<Data,Double>("salary"));
         tableView.setItems(list);
     }  
+    
+    @FXML
+    private void handleDelete(ActionEvent Event){
+        ObservableList<Data>selectedItems = FXCollections.observableArrayList();
+        selectedItems = tableView.getSelectionModel().getSelectedItems();
+        list.removeAll(selectedItems);
+        
+    }
     
     @FXML
     private void addPersonHandler(ActionEvent Event){
